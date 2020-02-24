@@ -7,6 +7,10 @@ url = "https://pypi.org/simple"
 torch = "*"
 torchvision = "*"
 transformers = "*"
+pandas = "*"
+absl-py = "*"
+"jinja2" = "*"
+tornado = "*"
 
 [dev-packages]
 
