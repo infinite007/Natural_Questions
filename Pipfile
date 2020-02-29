@@ -11,6 +11,11 @@ pandas = "*"
 absl-py = "*"
 "jinja2" = "*"
 tornado = "*"
+tensorflow = "==2.0.0"
+tensorflow-hub = "==0.7.0"
+tqdm = "*"
+scikit-learn = "*"
+seaborn = "*"
 
 [dev-packages]
 
