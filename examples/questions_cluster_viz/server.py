@@ -9,10 +9,10 @@ app = Flask(__name__)
 CORS(app)
 
 
-with open("data/cluster_labels.json", "r") as f:
+with open("../../data/cluster_labels.json", "r") as f:
     cluster_labels = np.array(json.load(f))
 
-with open("data/questions.json", "r") as f:
+with open("../../data/questions.json", "r") as f:
     questions = np.array(json.load(f))
 
 
