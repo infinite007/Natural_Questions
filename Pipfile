@@ -16,6 +16,9 @@ tensorflow-hub = "==0.7.0"
 tqdm = "*"
 scikit-learn = "*"
 seaborn = "*"
+flask = "*"
+flask-cors = "*"
+gevent = "*"
 
 [dev-packages]
 
