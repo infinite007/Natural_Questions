@@ -19,6 +19,7 @@ seaborn = "*"
 flask = "*"
 flask-cors = "*"
 gevent = "*"
+more-itertools = "*"
 
 [dev-packages]
 

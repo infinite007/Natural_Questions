@@ -20,13 +20,20 @@ print(tokenizer.encode("i like eggs", add_special_tokens=True))
 print(tokenizer.tokenize("i like eggs", add_special_tokens=True))
 print(tokenizer.encode("my car is totally damaged", add_special_tokens=True))
 print(tokenizer.tokenize("my car is totally damaged", add_special_tokens=True))
+print("tokenizing list of texts")
+print(tokenizer.tokenize("[CLS] [SEP]", add_special_tokens=True))
+print(tokenizer.batch_encode_plus(["Here is the sentence I want embeddings for.",
+                                   "[CLS] [SEP]", "[PAD]"], add_special_tokens=True))
 
 text = "Here is the sentence I want embeddings for."
-marked_text = "[CLS] " + text + " [SEP]"
+marked_text = text
 
 # Tokenize our sentence with the BERT tokenizer.
 tokenized_text = tokenizer.tokenize(marked_text)
 encoded_text = tokenizer.encode(marked_text)
+from utils.encoder_utils import pad_text
+print("tokenized text to Ids : ")
+print(tokenizer.convert_tokens_to_ids(pad_text(tokenized_text)))
 
 # Print out the tokens.
 print (tokenized_text)
