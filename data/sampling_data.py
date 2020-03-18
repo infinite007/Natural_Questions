@@ -7,7 +7,7 @@ Created on Sat Mar 14 15:25:36 2020
 
 import json
 
-class sample_extraction:
+class sample_extraction():
     def __init__(self,path):
         self.file=open(path)
     
