@@ -1,0 +1,4 @@
+This folder contains data that is extracted from the sample data set created
+The data is stored in MongoDB in the form of documents
+Name of the DB created in MongoDB is NQ and the name of the collection created is QA
+Each collection holds a document in form of dictionary (Key:Value) pair for each question,long_answer and short_answer
