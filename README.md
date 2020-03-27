@@ -119,3 +119,9 @@ Due to the Natural Questions dataset being really huge, we create a smaller samp
 
 Upon following the above procedure we obtained a smaller dataset with **89471** samples which is roughly **30%** of the total number of samples in the nq-train.jsonl dataset.
 
+# GDrive Link
+
+For accessing the dataset files and colab implementations, refer to the google drive folder given below.
+https://drive.google.com/open?id=1z4bBWdxKygnIh_OGOR8juyOZviH-g4Ok
+
+Note: The current implementation is under the folder name v3.
