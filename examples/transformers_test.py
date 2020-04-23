@@ -22,21 +22,24 @@ print(tokenizer.encode("my car is totally damaged", add_special_tokens=True))
 print(tokenizer.tokenize("my car is totally damaged", add_special_tokens=True))
 print("tokenizing list of texts")
 print(tokenizer.tokenize("[CLS] [SEP]", add_special_tokens=True))
+print("batch encode plus here : ")
 print(tokenizer.batch_encode_plus(["Here is the sentence I want embeddings for.",
-                                   "[CLS] [SEP]", "[PAD]"], add_special_tokens=True))
+                                   "[CLS] [SEP]", "[PAD]"], add_special_tokens=True,
+                                  pad_to_max_length=True))
 
 text = "Here is the sentence I want embeddings for."
 marked_text = text
 
 # Tokenize our sentence with the BERT tokenizer.
-tokenized_text = tokenizer.tokenize(marked_text)
+tokenized_texts = [tokenizer.tokenize(marked_text)]
 encoded_text = tokenizer.encode(marked_text)
 from utils.encoder_utils import pad_text
 print("tokenized text to Ids : ")
-print(tokenizer.convert_tokens_to_ids(pad_text(tokenized_text)))
+for tokenized_text in pad_text(tokenized_texts):
+    print("tokenized text : ", tokenizer.convert_tokens_to_ids(tokenized_text))
 
 # Print out the tokens.
-print (tokenized_text)
+print (tokenized_texts)
 print (encoded_text)
 
 input_ids = torch.tensor([tokenizer.encode("king", add_special_tokens=True)])
