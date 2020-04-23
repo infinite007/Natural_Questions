@@ -20,6 +20,8 @@ flask = "*"
 flask-cors = "*"
 gevent = "*"
 more-itertools = "*"
+"bs4" = "*"
+nltk = "*"
 
 [dev-packages]
 

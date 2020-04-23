@@ -1,6 +1,6 @@
 from more_itertools import padded
 
 
-def pad_text(text, pad_sym="[PAD]"):
+def pad_text(text, bos, eos, pad):
     max_seq_len = max([len(t) for t in text])
-    return [["[PAD]"] + list(padded(t, pad_sym, max_seq_len)) + ["[SEP]"] for t in text]
+    return [[bos] + list(padded(t, pad, max_seq_len)) + [eos] for t in text]
