@@ -12,7 +12,7 @@ import numpy as np
 epochs = 1
 nq_dataset = NQDatasetForBERT("/home/infinite007/Extras/ASU_COURSES/SEM1/CSE576/Natural_Questions/data/nq-train.jsonl")
 data_loader = DataLoader(nq_dataset, batch_size=1, collate_fn=collate_fn)
-mem_nn_model = MemoryNetwork()
+# mem_nn_model = MemoryNetwork()
 
 # print(mem_nn_model.forward(["Hi, There", "How are you?", "Bye Bye"],
 #                             ["1 Hi, There", "1 How are you?", "1 Bye Bye",
@@ -25,9 +25,9 @@ mem_nn_model = MemoryNetwork()
 
 for batch in data_loader:
     q, c, c_flat, la_strt, la_end, sa_strt, sa_end = batch
-    print("c flat : ", c_flat)
+    print("c flat : ", c)
 
-    print(mem_nn_model.forward(q, c_flat, c))
+    # print(mem_nn_model.forward(q, c_flat, c))
     break
 
 # for i in trange(epochs):

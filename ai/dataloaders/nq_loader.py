@@ -68,7 +68,7 @@ def collate_fn(batch):
 
     document_segments = [split_documents_into_segments(d) for d in document]
     max_len = max([len(b) for b in document_segments])
-    padded_document_segments = [[["<CLS>"] + list(padded(d, "<PAD>", max_len)) + ["<SEP>"] for d in ds] for ds in document_segments]
+    padded_document_segments = [["<CLS> " + " ".join(list(padded(d, "<PAD>", max_len))) + " <SEP>" for d in ds] for ds in document_segments]
     document_segments_flat = [k for i in padded_document_segments for j in i for k in j]
 
     # return batched_questions,\
