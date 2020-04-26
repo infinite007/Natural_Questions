@@ -13,6 +13,8 @@ class Constants:
     deploy_dir = os.path.join(root_dir, "deploy")
     preprocessing_dir = os.path.join(root_dir, "preprocessing")
     pretrained_dir = os.path.join(root_dir, "pretrained")
+    infersent_model_dir = os.path.join(data_dir, "encoder", "infersent1.pkl")
+    infersent_w2v_dir = os.path.join(data_dir, "Glove", "glove.840B.300d.txt")
     # encoder urls
     USE_url = "https://tfhub.dev/google/universal-sentence-encoder/%d"
     BERT_url = "https://tfhub.dev/tensorflow/bert_en_uncased_L-24_H-1024_A-16"
