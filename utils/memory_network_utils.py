@@ -17,7 +17,11 @@ def pad_document(self, documents):
 
 def split_documents_into_segments(document_text):
     def split_function(x):
-        return x in {"<P>", "<Tr>", "<Table>", "<Ul>", "<Ol>", "<Dl>", "<Li>", "<Dd>", "<Dt>"}
+        # lookup_set = ["<P>", "<Tr>", "<Table>", "<Ul>", "<Ol>", "<Dl>", "<Li>", "<Dd>", "<Dt>"]
+        # lookup_set = ["<P>", "<Table>", "<Ul>", "<Ol>", "<Dl>", "<Li>", "<Dd>", "<Dt>"]
+        lookup_set = ["<P>", "<Table>", "<Ul>", "<Ol>", "<Dl>", "<Dd>", "<Dt>"]
+        lookup_set = lookup_set + [i.upper() for i in lookup_set]
+        return x in set(lookup_set)
     return list(split_before(document_text.split(), lambda x: split_function(x)))
 
 

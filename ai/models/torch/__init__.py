@@ -1,3 +1,5 @@
 from .feed_forward_network import FeedForwardNetwork
 from .memory_network import MemoryNetwork
 from .siamese_network import SiameseNetwork
+from .highway_networks import HIGHWAYNetworks
+from .mutihead_highway_attention import MULTI_HEAD_HIGHWAY_ATTENTION_Networks

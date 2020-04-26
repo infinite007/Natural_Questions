@@ -1,3 +1,5 @@
 from .torch.siamese_network import SiameseNetwork
 from .torch.memory_network import MemoryNetwork
 from .torch.feed_forward_network import FeedForwardNetwork
+from .torch.highway_networks import HIGHWAYNetworks
+from .torch.mutihead_highway_attention import MULTI_HEAD_HIGHWAY_ATTENTION_Networks
